@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Movement on Map</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2_7KbHEKkLgmkFU2eF2nSl-9faeL7o-w&libraries=geometry"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Vehicle Movement on Map</h1>
+    <select id="timeOption" onchange="fetchVehicleLocation()">
+        <option value="today">Same Day</option>
+        <option value="yesterday">One Day Ago</option>
+        <option value="week">One Week Ago</option>
+        <option value="month">One Month Ago</option>
+    </select>
+    <p id="distanceCovered">Distance covered today: 0 km</p>
+    <div id="map" style="height: 600px; width: 100%;"></div>
+    <button onclick="startRoute()">Start Route</button>
+</body> 
+</html>
